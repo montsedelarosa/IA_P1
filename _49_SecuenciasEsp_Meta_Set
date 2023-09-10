@@ -1,0 +1,56 @@
+# _*_ coding: utf-8 _*_
+#!/usr/bin/env python
+# _*_ coding: cp1252 _*_
+# _*_ cdoing: 850 _*_
+
+#Metacaracteres: Sirven para poder especificar secuencias especiales y sets.
+
+import re
+
+texto = "Bienvenidos a Programación fácil y bienvenidos al curso de Python."
+buscar = re.findall("[c-g]",texto) #[c-g] es un metacaracter que representa conjunto de caracteres
+print(buscar) #Devuelve una lista con las coincidencias de caracteres encontrados en el string, en el rango entre la letra c y la g.
+
+texto = "¿Van al zoológico?"
+buscar = re.findall("zo{2}lógico", texto) #El {2} es un metacaracter que especifican un número determinado de resultados.
+if buscar:
+	print("Hay al menos una coincidencia.") #Dado que si hay una coincidencia, devuelve el print() del if.
+else:
+	print("No hay coincidencias.") 
+	
+#Aquí utilizamos 'pasado|futuro' que es un metacaracter que se utiliza para especificar que encuentre un resultado u otro.
+texto = "El futuro es ahora."
+buscar = re.findall("pasado|futuro", texto)
+if buscar:
+	print("Hay al menos una coincidencia.")
+else:
+	print("No hay coincidencias.")
+
+#Metacaracter 'progra..ción' carácter comodín, reemplaza cualquier carácter.
+
+texto = "La programación es fácil."
+buscar = re.findall("progra..ción", texto)
+if buscar:
+	print("Hay al menos una coincidencia.")
+else:
+	print("No hay coincidencias.")
+	
+#Metacaracter '^Se acerca' comienza con lo que le escribas.
+
+texto = "Se acerca el invierno."
+buscar = re.findall("^Se acerca", texto)
+if buscar:
+	print("Hay al menos una coincidencia.")
+else:
+	print("No hay coincidencias.")
+	
+#Metacaracter 'vierno.$' Termina con lo que le escribas.
+
+texto = "Se acerca el invierno."
+buscar = re.findall("vierno.$", texto)
+if buscar:
+	print("Hay al menos una coincidencia.")
+else:
+	print("No hay coincidencias.")
+
+

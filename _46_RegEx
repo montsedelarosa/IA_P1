@@ -1,0 +1,22 @@
+# _*_ coding: utf-8 _*_
+#!/usr/bin/env python
+# _*_ coding: cp1252 _*_
+# _*_ cdoing: 850 _*_
+
+#En este capítulo aprenderás a utilizar las expresiones regulares (RegEx) en Python
+
+#Función search()
+
+import re #importar modulo re 
+
+texto = "Bienvenidos a Programación fácil"
+busqueda = re.search("i", texto) #buscamos con la función search() del módulo re una coincidencia en la cadena de caracteres (string). El primer parámetro es lo que quieres buscar, en mi caso la letra 'i'
+print(busqueda)
+
+#La búsqueda se detiene cuando encuentra la primera 'i', las demás las ignora y por lo tanto, en span pone posición 1, 2 (de la posición 1 del string a la 2).
+
+#Por su precisión puede buscar hasta espacios en blanco 
+
+texto1 = "Bienvenidos a Programación fácil"
+busqueda1 = re.search("I", texto1) #buscamos con la función search() del módulo re una coincidencia en la cadena de caracteres (string). El primer parámetro es lo que quieres buscar, en mi caso la letra 'I'
+print(busqueda1)

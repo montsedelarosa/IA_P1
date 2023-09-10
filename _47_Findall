@@ -1,0 +1,20 @@
+# _*_ coding: utf-8 _*_
+#!/usr/bin/env python
+# _*_ coding: cp1252 _*_
+# _*_ cdoing: 850 _*_
+
+#findall() a diferencia de search() encuentra todos los resultados, aunque estén repetidos.
+
+import re
+
+texto = "tres tristes tigres comen trigo en un trigal"
+busqueda = re.findall("e", texto) #busca y encuentra los resultados repetidos con 'findall'
+print(busqueda) #imprime la busqueda
+
+#Al igual que con search() puedes buscar sílabas, palabras, frases, párrafos, páginas o libros enteros, probemos con la sílaba "es":
+
+texto1 = "tres tristes tigres comen trigo en un trigal"
+busqueda1 = re.findall("es", texto1) #busca y encuentra los resultados repetidos con 'findall'
+print(busqueda1) #imprime la busqueda
+
+#Si findall() no encuentra ningún resultado, devuelve una lista vacía: []

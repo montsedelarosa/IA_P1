@@ -1,0 +1,24 @@
+# _*_ coding: utf-8 _*_
+#!/usr/bin/env python
+# _*_ coding: cp1252 _*_
+# _*_ cdoing: 850 _*_
+
+#Importar módulos
+
+
+import math #Modulo math 
+
+#Las funciones lambda
+
+def area(radio): 
+    resultado = round (math.pi * radio * radio, 2) #variable para calcular el radio de un circulo, con 'round' se redondea el resultado
+    print(resultado) #imprime el resultado
+
+area(2) #asigna el valor al area del circulo 
+
+#Simplificar la funcion con lambda
+
+area = lambda radio: (round (math.pi * radio * radio, 2)) #simplifica todo lo anterior en un renglon 
+
+print(area(2)) #imprime la funcion simplificada 
+

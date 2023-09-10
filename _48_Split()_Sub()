@@ -1,0 +1,35 @@
+# _*_ coding: utf-8 _*_
+#!/usr/bin/env python
+# _*_ coding: cp1252 _*_
+# _*_ cdoing: 850 _*_
+
+# SPLIT(): Esta función divide una cadena de caracteres según un patrón de búsqueda.
+#El resultado de utilizar split() con un espacio como patrón, es que me excluye todos los espacios del string y me los separa palabra por palabra en una lista.
+
+import re
+
+texto = "tres tristes tigres comen trigo en un trigal"
+busqueda = re.split(" ", texto)
+print(busqueda)
+
+#no solo funciona con espacios, puedes indicarle que excluya y divida cualquier cosa:
+
+busqueda = re.split("es", texto)
+print(busqueda)
+
+#MAXSPLIT(): Controla el máximo de coincidencias que devuelve split().
+
+busqueda = re.split(" ", texto, 4)
+print(busqueda)
+
+#SUB(): Reemplaza las coincidencias por lo que le especifiques en el segundo argumento.
+
+busqueda = re.sub(" ",  "-",  texto)
+print(busqueda)
+
+#Limitar los resultados de sub con count
+
+busqueda = re.sub(" ",  "-",  texto, 4)
+print(busqueda)
+
+

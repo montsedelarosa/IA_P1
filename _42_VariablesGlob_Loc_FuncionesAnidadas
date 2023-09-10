@@ -1,0 +1,32 @@
+# _*_ coding: utf-8 _*_
+#!/usr/bin/env python
+# _*_ coding: cp1252 _*_
+# _*_ cdoing: 850 _*_
+
+# SCOPE: Se refiere al alcance que tiene una variable, si es local o global.
+#Las variables de las funciones son de ámbito local y solo podemos acceder a ellas dentro de la misma función. En cambio, las variables declaradas fuera de una función son directamente globales y las podemos utilizar tanto dentro como fuera de ellas. 
+
+# VARIABLES LOCALES
+def funcion1():
+    variable1 = "Variable dentro de la función." #Variable de ambito local 1
+    print(variable1) #imprime la variable de ambito local
+
+    def funcion2(): #variable de ambito local 2
+        variable1 = "He cambiado el valor de la función." #cambia el valor de la variable 1
+        print(variable1) #imprime el nuevo cambio de valor de variable 
+
+    funcion2() #llama a la funcion 2, pero lo imprime de segundo  
+
+funcion1() #llama a la funcion 1, pero la imprime de primero 
+
+# VARIABLE GLOBAL Y FUNCIONES ANIDADAS
+
+num1=50 #variable global
+
+def funcion1():
+    global num1 #funcion 'global'
+    num1 = 10 #variable global
+
+funcion1()
+
+print(num1)
