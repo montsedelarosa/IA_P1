@@ -36,8 +36,8 @@ while reinicio: #ciclo que se cunplira siempre y cuando el reinicio sea = a true
 		print("El resultado es: ", num1 + num2) #En otro caso, el usuario si introducio 2 valores
 	finally:
 	    pregunta = input("¿Quieres seguir multiplicando? introduce S/N: \n") #Finalmente: pregunta si el reinicio será true o false
-
-if pregunta == "N": #Si es no, el programa termina
+		
+    if pregunta == "N": #Si es no, el programa termina
 	    reinicio = False
-else:
+    else:
 		print("De acuerdo, vamos a seguir multiplicando.") #Si es si, el programa continua 
